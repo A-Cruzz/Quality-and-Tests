@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <!-- Adicione esta linha para o login com Google -->
+</head>
+
+<body>
+    <div class="header-container">
+        <header>
+            <button id="icon-profile" onclick="location.href='login.html'">
+                <img src="src/icones/icon-provile.png" alt="ícone pessoa">
+            </button>
+            <div class="logo-header"></div>
+            <button id="shopping-cart" onclick="location.href='carrinho.html'">
+                <img src="src/icones/icon-carrinho.png" alt="ícone carrinho">
+            </button>
+        </header>
+
+        <hr class="header-hr">
+        <nav>
+            <button class="button-menu" onclick="location.href='index.html'">Início</button>
+            <button class="button-menu" onclick="location.href='cardapio.html'">Cardápio</button>
+            <button class="button-menu" onclick="location.href='sobre.html'">Sobre</button>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="login-container">
+            <div class="title">
+                <h2>Login</h2>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="E-mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Senha">
+                </div>
+
+                <button type="submit" class="login-button" id="login-button">Entrar</button>
+
+                <div class="divider">ou</div>
+
+
+                <div class="github-login-container">
+                    <div class="github-login">
+                        <button onclick="githubLogin()" class="github-login-button" id="github-login-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                            Fazer Login com o GitHub
+                        </button>
+                    </div>
+                </div>
+
+
+        </div>
+
+        <div class="register-link">
+            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    <footer id="contato" class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="src/images/FabiDoces-logo.png" alt="Logo FabiDoces">
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-info">
+                <p>E-mail: contatofabidoces@gmail.com</p>
+                <p>Telefone: 11 9887-6264</p>
+                <p>@fabidoces</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright © 2025. Todos os Direito Reservados </p>
+        </div>
+    </footer>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="js/login/login.js"></script>
+
+</body>
+
+</html>

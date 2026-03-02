@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <title>Meu Carrinho</title>
+  <link rel="stylesheet" href="css/carrinho.css">
+  <link rel="stylesheet" href="css/index.css">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js" defer></script>
+
+  <script src="js/cardapio/cardapio.js" type="module" defer></script>
+  <script src="js/carrinho/carrinho.js" type="module" defer></script>
+  <script src="js/inicio/inicio.js" type="module" defer></script>
+</head>
+
+<body>
+
+  <div class="header-container">
+    <header>
+      <button id="icon-profile" onclick="location.href='login.html'">
+        <img src="src/icones/icon-provile.png" alt="ícone pessoa">
+      </button>
+      <div class="logo-header"></div>
+      <button id="shopping-cart" onclick="location.href='carrinho.html'">
+        <img src="src/icones/icon-carrinho.png" alt="ícone carrinho">
+      </button>
+    </header>
+
+    <hr class="header-hr">
+    <nav>
+      <button class="button-menu" onclick="location.href='index.html'">Início</button>
+      <button class="button-menu" onclick="location.href='cardapio.html'">Cardápio</button>
+      <button class="button-menu" onclick="location.href='sobre.html'">Sobre</button>
+    </nav>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="titulo-carrinho">
+        <h2>Confirmação de Pedidos</h2>
+      </div>
+
+      <div class="card">
+        <h3>Meu Carrinho</h3>
+        <div id="carrinho"></div>
+        <div id="paymentBrick_container"></div>
+      </div>
+
+      <div class="coluna-direita">
+        <div class="valortotal">
+          <h3>Valor Total</h3>
+          <div class="valor" id="valor-total">R$ 0,00</div>
+          <div class="formulario">
+            <h3>Confirmar dados</h3>
+            <input type="text" id="nome" placeholder="Nome completo">
+            <input type="text" id="email" placeholder="E-mail">
+            <input type="text" id="telefone" placeholder="Telefone">
+            <button id="botao-finalizar-compra" class="finalizar-compra" onclick="window.criarPopUpEscolha()">Confirmar
+              Pedido
+            </button>
+          </div>
+        </div>
+  </main>
+
+  <button id="faq-btn" class="botao-faq-flutuante">?</button>
+
+
+  <footer id="contato" class="footer-container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="src/images/FabiDoces-logo.png" alt="Logo FabiDoces">
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-info">
+        <p>E-mail: contatofabidoces@gmail.com</p>
+        <p>Telefone: 11 9887-6264</p>
+        <p>@fabidoces</p>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>Copyright © 2025. Todos os Direito Reservados </p>
+    </div>
+  </footer>
+
+  <div id="faq-popup" class="popup-faq">
+    <div class="popup-faq-conteudo">
+      <span id="close-faq" class="popup-close-faq">&times;</span>
+      <h2>Como as encomendas funcionam?</h2>
+      <p>Ao confirmar seus dados e finalizar o pedido, você estará realizando uma <strong>reserva</strong>. O pagamento
+        será efetuado imediatamente após essa confirmação. A validação da reserva será enviada por e-mail e, caso não
+        seja possível concluir o processo, você receberá o reembolso.</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

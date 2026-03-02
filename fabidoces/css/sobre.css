@@ -1,0 +1,223 @@
+*{
+    font-family: Roboto;
+}
+
+a {
+    color: var(--secondary-color-dark);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --primary-color: rgb(194, 158, 96);
+
+    --secondary-color-light: #b4532c;
+    --secondary-color-dark: #5b2a17;
+    --secondary-color-dark2: #914F1D;
+
+    --text-color-1: black;
+    --text-color-2: #fff9f6;
+
+    --background-color: #E6E6E6;
+    --background-color-dark: black;
+}
+
+.sobre-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sobre-content {
+    text-align: center;
+    color: #333;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.sobre-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    color: var(--secondary-color-dark);
+    font-weight: bold;
+}
+
+.sobre-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.sobre-content .assinatura {
+    margin-top: 20px;
+    font-style: italic;
+    color: #666;
+    font-size: 16px;
+}
+
+.fabiana-img img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.depoimento {
+    background-color: #f9f9f9;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-left: 6px solid var(--primary-color);
+    font-style: italic;
+    color: #444;
+}
+
+.depoimento span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.equipe {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.equipe h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.cards-equipe {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Breakpoints */
+
+@media only screen and (max-width: 768px) {
+    .sobre-container {
+        padding: 100px 15px 30px;
+    }
+    
+    .sobre-content {
+        padding: 25px;
+    }
+    
+    .sobre-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .sobre-content p {
+        font-size: 1rem;
+    }
+    
+    .cards-equipe {
+        gap: 20px;
+    }
+    
+    .card {
+        width: 220px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .sobre-container {
+        padding: 80px 10px 20px;
+    }
+    
+    .sobre-content {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .sobre-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .fabiana-img img {
+        border-radius: 8px;
+    }
+    
+    .depoimento {
+        padding: 20px;
+        margin: 30px auto;
+        font-size: 0.9rem;
+    }
+    
+    .equipe h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .cards-equipe {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 280px;
+        padding: 15px;
+    }
+    
+    .card img {
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .sobre-content {
+        padding: 15px;
+    }
+    
+    .sobre-content h1 {
+        font-size: 1.3rem;
+    }
+    
+    .sobre-content p {
+        font-size: 0.9rem;
+    }
+    
+    .depoimento {
+        padding: 15px;
+    }
+    
+    .card {
+        padding: 12px;
+    }
+}

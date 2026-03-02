@@ -1,0 +1,63 @@
+server:
+  port: 8083
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: NexBuy3d.contato@gmail.com
+    default-send: NexBuy3d.contato@gmail.com
+    password: zbuk bdbf iswj drbq
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+
+  datasource:
+    url: jdbc:mysql://www.thyagoquintas.com.br:3306/engenharia_67?createDatabaseIfNotExist=false
+    username: engenharia_67
+    password: ariranha
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    connection-timeout: 5000ms
+    template:
+      retry:
+        enabled: true
+        initial-interval: 1000ms
+        multiplier: 2.0
+        max-attempts: 3
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 5000ms
+
+app:
+  rabbitmq:
+    queues:
+      email: email-queue
+    exchanges:
+      email: email-exchange
+    routing-keys:
+      email: email-routing-key
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+    prefer-ip-address: true

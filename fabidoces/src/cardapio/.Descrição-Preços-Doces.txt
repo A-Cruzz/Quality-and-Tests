@@ -1,0 +1,44 @@
+1. Beijinho de Coco
+Docinho cremoso de coco, enrolado no açúcar cristal e decorado com cravo-da-índia.
+
+2. Brigadeiro Gourmet
+Brigadeiro feito com chocolate de alta qualidade (belga ou meio amargo), mais cremoso e com cobertura especial.
+
+3. Brigadeiro de Leite Ninho
+Brigadeiro branco feito com leite condensado e leite em pó, de sabor suave e textura macia.
+
+4. Brigadeiro de Morango (Bicho de Pé)
+Doce rosado com sabor de morango, feito com leite condensado e chocolate branco, suave e docinho.
+
+5. Brigadeiro Tradicional
+Clássico brigadeiro de chocolate, enrolado no granulado, com sabor marcante e textura cremosa.
+
+6. Cajuzinho
+Docinho de amendoim com um toque de chocolate, enrolado em açúcar e moldado em formato de caju.
+
+7. Camafeu de Nozes
+Doce refinado de nozes coberto com chocolate branco e decorado com pedaços de noz.
+
+8. Trufa de Chocolate
+Bolinhas de chocolate recheadas com ganache cremoso, com sabor intenso e textura aveludada.
+
+9. Trufa de Maracujá
+Trufa com recheio cremoso de maracujá, coberta com chocolate branco ou ao leite, com sabor levemente ácido e doce.
+
+10. Bombom de Uva
+Uva fresca envolta em creme doce e coberta com chocolate, unindo o frescor da fruta ao sabor do chocolate.
+
+---------------------------------------------------------------
+
+	Tabela de preços
+
+Beijinho de Coco________________1,50
+Brigadeiro Gourmet______________2,50
+Brigadeiro de Leite Ninho_______1,80
+Brigadeiro de Morango___________1,80
+Brigadeiro Tradicional__________1,50
+Cajuzinho_______________________1,50
+Camafeu de Nozes________________3,00
+Trufa de Chocolate______________2,50
+Trufa de Maracujá_______________2,50
+Bombom de Uva___________________2,00

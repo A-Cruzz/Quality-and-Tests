@@ -1,0 +1,90 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: client-service
+  datasource:
+    url: jdbc:mysql://www.thyagoquintas.com.br:3306/engenharia_67?createDatabaseIfNotExist=false
+    username: engenharia_67
+    password: ariranha
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      location: ${java.io.tmpdir}
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    connection-timeout: 5000ms
+    template:
+      retry:
+        enabled: true
+        initial-interval: 1000ms
+        multiplier: 2.0
+        max-attempts: 3
+    listener:
+      simple:
+        concurrency: 5
+        max-concurrency: 10
+        prefetch: 50
+        acknowledge-mode: auto
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 1000ms
+          multiplier: 2.0
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: NexBuy3d.contato@gmail.com
+    default-send: NexBuy3d.contato@gmail.com
+    password: zbuk bdbf iswj drbq
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+
+
+app:
+  rabbitmq:
+    queues:
+      email:
+        name: emailQueue
+        durable: true
+      client:
+        query: clientQueryQueue
+        response: clientResponseQueue
+
+thymeleaf:
+  cache: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+    prefer-ip-address: true
+
+cloudinary:
+  cloud-name: dmgkstq2h
+  api-key: 583517977358694
+  api-secret: AUG8vwNmeh03B5J3tmo03R9Owxw
+
+logging:
+  level:
+    com.fabidoces_microservices.client_service: DEBUG

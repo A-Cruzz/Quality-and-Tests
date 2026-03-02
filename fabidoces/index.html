@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabiDoces</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <script src="js/carrinho/carrinho.js" type="module" defer></script>
+    <script src="js/inicio/inicio.js" type="module" defer></script>
+
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="header-container">
+        <header>
+            <button id="icon-profile" onclick="location.href='login.html'">
+                <img src="src/icones/icon-provile.png" alt="ícone pessoa">
+            </button>
+            <div class="logo-header"></div>
+            <button id="shopping-cart" onclick="location.href='carrinho.html'">
+                <img src="src/icones/icon-carrinho.png" alt="ícone carrinho">
+            </button>
+        </header>
+
+        <hr class="header-hr">
+        <nav>
+            <button class="button-menu" onclick="location.href='index.html'">Início</button>
+            <button class="button-menu" onclick="location.href='cardapio.html'">Cardápio</button>
+            <button class="button-menu" onclick="location.href='sobre.html'">Sobre</button>
+
+        </nav>
+    </div>
+
+    <div class="page-title">
+        <h1>Destaques</h1>
+    </div>
+
+    <section id="secao1" class="carrossel">
+
+        <div class="seta esquerda">
+            <img src="src/icones/seta-esquerda.png" alt="Seta para a esquerda">
+        </div>
+
+        <div class="carrossel-container">
+            <div class="carrossel" id="carrossel"><!-- Os produtos colocados via JavaScript --></div>
+        </div>
+
+        <div class="seta direita">
+            <img src="src/icones/seta-direita.png" alt="Seta para a direita">
+        </div>
+    </section>
+
+    <section id="secao2" class="sobre">
+        <div class="text-sobre">
+            <h2>Nos conheça</h2>
+            <div class="generic-divider"></div>
+            <p>Fabiana é uma apaixonada por doces que transformou seu amor pela confeitaria em um negócio encantador.
+                Recentemente, ela abriu a FabiDoces, uma lojinha repleta de delícias caseiras que conquistam o coração
+                de todos. Agora, com o lançamento do seu novo site, Fabiana está pronta para levar suas criações
+                irresistíveis para ainda mais pessoas. Navegue pelo site da FabiDoces e descubra uma variedade de doces
+                feitos com carinho e dedicação. Cada mordida é uma prova do talento e da paixão de Fabiana pela arte da
+                confeitaria.</p>
+        </div>
+    </section>
+
+    <section id="secao3" class="produtos">
+
+        <div class="text-produtos">
+            <hr class="top-line">
+            <h2>Conheça nossos produtos</h2>
+            <button class="menu-button" onclick="location.href='cardapio.html'">Cardápio</button>
+        </div>
+
+        <div class="imagens-produtos">
+            <div>
+
+                <img src="src/cardapio/Brigadeiro-Pistache.jpg" alt="" class="img-produto">
+            </div>
+            <div>
+                <img src="src/cardapio/Trufa-Maracuja.jpg" alt="" class="img-produto">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <button id="faq-btn" class="botao-faq-flutuante">?</button>
+
+    <footer id="contato" class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="src/images/FabiDoces-logo.png" alt="Logo FabiDoces">
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-info">
+                <p>E-mail: contatofabidoces@gmail.com</p>
+                <p>Telefone: 11 9887-6264</p>
+                <p>@fabidoces</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright © 2025. Todos os Direito Reservados </p>
+        </div>
+    </footer>
+
+    <div id="faq-popup" class="popup-faq">
+        <div class="popup-faq-conteudo">
+            <span id="close-faq" class="popup-close-faq">&times;</span>
+            <h2>Como as encomendas funcionam?</h2>
+            <p>Ao confirmar seus dados e finalizar o pedido, você estará realizando uma <strong>reserva</strong>. O
+                pagamento
+                será efetuado imediatamente após essa confirmação. A validação da reserva será enviada por e-mail e,
+                caso não
+                seja possível concluir o processo, você receberá o reembolso.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

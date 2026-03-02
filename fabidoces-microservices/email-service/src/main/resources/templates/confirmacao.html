@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="margin: 0; padding: 0; width: 100%; box-sizing: border-box;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Cadastro - NexBuy 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; font-size: 16px; color: #333333; background-color: #f8f9fa; line-height: 1.6;">
+<!-- Container Principal -->
+<table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <!-- Header com Gradiente Azul -->
+    <tr>
+        <td style="background: linear-gradient(135deg, #2563eb, #3b82f6); padding: 30px 20px; text-align: center;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="text-align: center;">
+                        <!-- Logo NexBuy 3D -->
+                        <img src="https://res.cloudinary.com/dmgkstq2h/image/upload/v1764348084/logo_next_buy_u5nhzd.png" alt="NexBuy 3D" style="width: 180px; height: auto; margin-bottom: 15px;">
+                        <h1 style="color: #ffffff; font-size: 28px; font-weight: 700; margin: 0; letter-spacing: -0.5px;">
+                            Bem-vindo ao NexBuy 3D!
+                        </h1>
+                        <p style="color: #e0f2fe; font-size: 16px; margin: 8px 0 0 0; font-weight: 500;">
+                            Sua jornada de compras 3D está prestes a começar
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- Conteúdo Principal -->
+    <tr>
+        <td style="padding: 40px 30px;">
+            <!-- Saudação -->
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="padding-bottom: 25px;">
+                        <h2 style="color: #1e293b; font-size: 20px; font-weight: 600; margin: 0;">
+                            Olá, [[${nome}]]! 🎉
+                        </h2>
+                        <p style="color: #64748b; margin: 10px 0 0 0; font-size: 16px;">
+                            Estamos muito felizes em tê-lo(a) conosco. Para ativar sua conta e desbloquear todos os recursos, 
+                            confirme seu cadastro clicando no botão abaixo.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Card de Boas-vindas -->
+            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; margin: 20px 0;">
+                <tr>
+                    <td style="padding: 25px;">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="text-align: center;">
+                                    <div style="background-color: #dbeafe; width: 60px; height: 60px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                                        <span style="color: #2563eb; font-size: 24px;">👋</span>
+                                    </div>
+                                    <h3 style="color: #1e293b; font-size: 18px; font-weight: 600; margin: 0 0 10px 0;">
+                                        Conta Quase Pronta!
+                                    </h3>
+                                    <p style="color: #475569; margin: 0; font-size: 15px;">
+                                        Falta apenas um passo para você acessar toda a experiência NexBuy 3D
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Botão de Confirmação -->
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="text-align: center; padding: 10px 0 30px 0;">
+                        <a th:href="${linkConfirmacao}" style="
+                            display: inline-block;
+                            background: linear-gradient(135deg, #2563eb, #3b82f6);
+                            color: #ffffff;
+                            text-decoration: none;
+                            padding: 14px 32px;
+                            border-radius: 8px;
+                            font-weight: 600;
+                            font-size: 16px;
+                            border: none;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+                        " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(37, 99, 235, 0.4)';" 
+                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(37, 99, 235, 0.3)';">
+                            🚀 Confirmar Cadastro
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Dica Extra -->
+            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #fef3c7; border-radius: 8px; border: 1px solid #fcd34d; margin: 20px 0 0 0; padding: 15px;">
+                <tr>
+                    <td>
+                        <p style="color: #92400e; margin: 0; font-size: 14px; text-align: center;">
+                            💡 <strong>Dica:</strong> Após confirmar, faça login e explore nossa plataforma!
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+        <td style="background-color: #1e293b; padding: 30px 20px; text-align: center;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="text-align: center;">
+                        <!-- Logo Footer -->
+                        <img src="https://res.cloudinary.com/dmgkstq2h/image/upload/v1764348084/logo_next_buy_u5nhzd.png" alt="NexBuy" style="width: 120px; height: auto; margin-bottom: 20px; opacity: 0.9;">
+                        
+                        <!-- Informações de Contato -->
+                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
+                            <tr>
+                                <td style="text-align: center;">
+                                    <p style="color: #cbd5e1; margin: 5px 0; font-size: 14px;">
+                                        📧 suporte@nexbuy.com
+                                    </p>
+                                    <p style="color: #cbd5e1; margin: 5px 0; font-size: 14px;">
+                                        📞 (11) 99999-9999
+                                    </p>
+                                    <p style="color: #cbd5e1; margin: 5px 0; font-size: 14px;">
+                                        🌐 www.nexbuy.com
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Redes Sociais -->
+                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
+                            <tr>
+                                <td style="text-align: center;">
+                                    <a href="#" style="display: inline-block; margin: 0 8px; color: #cbd5e1; text-decoration: none; font-size: 14px;">
+                                        Instagram
+                                    </a>
+                                    <span style="color: #475569;">•</span>
+                                    <a href="#" style="display: inline-block; margin: 0 8px; color: #cbd5e1; text-decoration: none; font-size: 14px;">
+                                        Facebook
+                                    </a>
+                                    <span style="color: #475569;">•</span>
+                                    <a href="#" style="display: inline-block; margin: 0 8px; color: #cbd5e1; text-decoration: none; font-size: 14px;">
+                                        LinkedIn
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Copyright e Aviso -->
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="text-align: center;">
+                                    <p style="color: #94a3b8; font-size: 12px; margin: 8px 0; line-height: 1.4;">
+                                        Este email foi enviado automaticamente. Por favor, não responda.<br>
+                                        © 2025 NexBuy 3D. Todos os direitos reservados.
+                                    </p>
+                                    <p style="color: #64748b; font-size: 11px; margin: 5px 0;">
+                                        Av. Paulista, 1000 - São Paulo, SP - 01310-100
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Espaço Final -->
+<table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 20px auto 0 auto;">
+    <tr>
+        <td style="text-align: center; padding: 20px;">
+            <p style="color: #64748b; font-size: 12px; margin: 0;">
+                Caso não tenha criado uma conta no NexBuy 3D, por favor ignore esta mensagem.
+            </p>
+            <p style="color: #94a3b8; font-size: 11px; margin: 8px 0 0 0;">
+                Link válido por 24 horas
+            </p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

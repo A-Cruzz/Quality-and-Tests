@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/cardapio.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=League+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--Adicionar favicon personalizado posteriormente-->>
+
+  <script src="js/cardapio/cardapio.js" type="module" defer></script>
+  <script src="js/carrinho/carrinho.js" type="module" defer></script>
+  <script src="js/inicio/inicio.js" type="module" defer></script>
+
+
+
+  <title>Cardápio FabiDoces</title>
+</head>
+
+<body>
+
+  <div class="header-container">
+    <header>
+      <button id="icon-profile" onclick="location.href='login.html'">
+        <img src="src/icones/icon-provile.png" alt="ícone pessoa">
+      </button>
+      <div class="logo-header"></div>
+      <button id="shopping-cart" onclick="location.href='carrinho.html'">
+        <img src="src/icones/icon-carrinho.png" alt="ícone carrinho">
+      </button>
+    </header>
+
+    <hr class="header-hr">
+    <nav>
+      <button class="button-menu" onclick="location.href='index.html'">Início</button>
+      <button class="button-menu" onclick="location.href='cardapio.html'">Cardápio</button>
+      <button class="button-menu" onclick="location.href='sobre.html'">Sobre</button>
+    </nav>
+  </div>
+
+  <div class="title-menu">
+    <h2>Nossos Doces</h2>
+  </div>
+
+  <section>
+    <div class="imagens-produtos-menu" id="container-composer"></div>
+  </section>
+
+  <button id="faq-btn" class="botao-faq-flutuante">?</button>
+
+  <footer id="contato" class="footer-container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="src/images/FabiDoces-logo.png" alt="Logo FabiDoces">
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-info">
+        <p>E-mail: contatofabidoces@gmail.com</p>
+        <p>Telefone: 11 9887-6264</p>
+        <p>@fabidoces</p>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>Copyright © 2025. Todos os Direito Reservados </p>
+    </div>
+  </footer>
+
+  <div id="faq-popup" class="popup-faq">
+    <div class="popup-faq-conteudo">
+      <span id="close-faq" class="popup-close-faq">&times;</span>
+      <h2>Como as encomendas funcionam?</h2>
+      <p>Ao confirmar seus dados e finalizar o pedido, você estará realizando uma <strong>reserva</strong>. O pagamento
+        será efetuado imediatamente após essa confirmação. A validação da reserva será enviada por e-mail e, caso não
+        seja possível concluir o processo, você receberá o reembolso.</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

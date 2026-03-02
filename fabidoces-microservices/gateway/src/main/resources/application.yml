@@ -1,0 +1,84 @@
+server:
+  port: 8080
+  tomcat:
+    max-swallow-size: -1
+    max-http-form-post-size: 4MB
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://127.0.0.1:5500"
+              - "https://fabidoces.com"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            allowCredentials: true
+            maxAge: 3600
+      httpclient:
+        connect-timeout: 10000
+        response-timeout: 60s
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - StripPrefix=1
+
+        - id: client-service
+          uri: lb://client-service
+          predicates:
+            - Path=/api/client/**
+          filters:
+            - StripPrefix=1
+            - name: RequestSize
+              args:
+                maxSize: 8MB
+
+        - id: email-service
+          uri: lb://email-service
+          predicates:
+            - Path=/api/email/**
+          filters:
+            - StripPrefix=1
+
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/api/payment/**
+          filters:
+            - StripPrefix=1
+            - name: RequestSize
+              args:
+                maxSize: 4MB
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+    prefer-ip-address: true
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web: DEBUG

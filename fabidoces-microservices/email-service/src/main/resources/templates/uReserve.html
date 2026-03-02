@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="margin: 0; padding: 0; width: 100%; box-sizing: border-box;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Roboto', Arial, sans-serif; font-size: 18px; color: #333; background-color: #f4f4f4;">
+<!-- Container -->
+<table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+    <tr>
+        <td style="padding: 20px;">
+            <!-- Header -->
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <!--Imagem-->
+                    <td style="text-align: center;">
+                        <img src="https://i.ibb.co/r2nZ1XZh/Fabi-Doces-logo.png" alt="Logo" style="width: 150px; height: auto;">
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Main -->
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="text-align: center;">
+                        <h1 style="font-family: 'Great Vibes', cursive; font-size: 48px; margin: 0; color: #914F1D;">
+                            Recebemos seu pedido!
+                        </h1>
+                        <p style="margin-top: 20px; font-size: 18px; padding: 30px;">
+                            Olá, [[${nome}]], em breve entraremos em contato para confirmar o método de pagamento e o local de entrega!
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Conteudo complementar -->
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                        <h3 style="text-align: center; margin-bottom: 20px; margin: auto; color: #914F1D; font-family: 'Great Vibes', cursive; font-size: 35px;">Seu Pedido</h3>
+                        <table width="90%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                            <tr>
+                                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Item</th>
+                                <th style="text-align: center; padding: 10px; border-bottom: 1px solid #ddd;">Quantidade</th>
+                                <th style="text-align: right; padding: 10px; border-bottom: 1px solid #ddd;">Valor</th>
+                            </tr>
+                            <tr th:each="item : ${items}">
+                                <td style="padding: 10px; border-bottom: 1px solid #ddd; vertical-align: middle;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img th:src="${item.image}" alt="Produto" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px; border-radius: 5px;">
+                                        <span th:text="${item.name}"></span>
+                                    </div>
+                                </td>
+                                <td style="text-align: center; padding: 10px; border-bottom: 1px solid #ddd; vertical-align: middle;" th:text="${item.quantity}"></td>
+                                <td style="text-align: right; padding: 10px; border-bottom: 1px solid #ddd; vertical-align: middle;" th:text="'R$ ' + ${#numbers.formatDecimal(item.price * item.quantity, 1, 2, 'POINT')}"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: left; padding: 15px 10px; font-weight: bold;">Total:</td>
+                                <td style="text-align: right; padding: 15px 10px; font-weight: bold;">R$ [[${#numbers.formatDecimal(total, 1, 2, 'POINT')}]]</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Post-Content -->
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="text-align: center;">
+                        <p style="margin-top: 20px; font-size: 14px; padding: 30px;">
+                            Caso alguma dúvida não seja atendida pela nossa <a href="https://www.instagram.com/_fabi_doces_?igsh=MWFzOXVwbzI4dG9vZA%3D%3D" target="_blank">FAQ</a>, pedimos que entre em contato conosco diretamente.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Footer -->
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="text-align: center; padding: 40px 0 20px 0; font-size: 12px; color: gray;">
+                        <p style="margin: 15px;">
+                            Este email foi enviado de forma automática, por gentileza não tente respondê-lo.
+                        </p>
+                        <p style="margin: 5px;">contatosfabidoces@email.com</p>
+                        <p style="margin: 5px;">(11) 91244-9468</p>
+                        <p style="margin: 5px;"><a href="https://www.instagram.com/_fabi_doces_?igsh=MWFzOXVwbzI4dG9vZA%3D%3D" target="_blank">@fabidoces</a></p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
